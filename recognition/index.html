@@ -4,21 +4,46 @@
 <meta charset="utf-8" />
 <title>Recognition — Tyler Borchers</title>
 
-<meta name="description" content="Endorsements and recognition for Tyler Borchers, SVP, Strategy &amp; Operations." />
+<meta name="description" content="Endorsements from colleagues and leaders, plus executive development programs, for Tyler Borchers — SVP, Strategy &amp; Operations." />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="author" content="Tyler Borchers" />
 <link rel="canonical" href="https://tylerborchers.com/recognition/" />
 
+<!-- Open Graph -->
 <meta property="og:title" content="Recognition — Tyler Borchers" />
-<meta property="og:description" content="Endorsements and recognition for Tyler Borchers, SVP, Strategy &amp; Operations." />
+<meta property="og:description" content="Endorsements from colleagues and leaders, plus executive development programs." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://tylerborchers.com/recognition/" />
 <meta property="og:image" content="https://i.imgur.com/xTV4C51.jpeg" />
 
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Recognition — Tyler Borchers" />
-<meta name="twitter:description" content="Endorsements and recognition for Tyler Borchers, SVP, Strategy &amp; Operations." />
+<meta name="twitter:description" content="Endorsements from colleagues and leaders, plus executive development programs." />
 <meta name="twitter:image" content="https://i.imgur.com/xTV4C51.jpeg" />
+
+<!-- schema.org Person markup with credentials for AEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Tyler Borchers",
+  "url": "https://tylerborchers.com",
+  "jobTitle": "SVP, Strategy & Operations",
+  "worksFor": { "@type": "Organization", "name": "RNS" },
+  "sameAs": [
+    "https://www.linkedin.com/in/tylerborchers",
+    "https://x.com/tylerborchers",
+    "https://bsky.app/profile/tylerborchers.com"
+  ],
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "name": "Project Director, JournalismAI Innovation Challenge", "recognizedBy": { "@type": "Organization", "name": "London School of Economics" }, "dateCreated": "2026" },
+    { "@type": "EducationalOccupationalCredential", "name": "News Product Management Certification", "recognizedBy": { "@type": "Organization", "name": "News Product Alliance" }, "dateCreated": "2025" },
+    { "@type": "EducationalOccupationalCredential", "name": "Solutions Journalism Revenue Accelerator", "recognizedBy": { "@type": "Organization", "name": "Blue Engine Collaborative" }, "dateCreated": "2025" },
+    { "@type": "EducationalOccupationalCredential", "name": "Essential Skills for Newsroom Leaders", "recognizedBy": { "@type": "Organization", "name": "Poynter Institute" }, "dateCreated": "2024" }
+  ]
+}
+</script>
 
 <style>
   :root{
@@ -27,6 +52,9 @@
     --text:#111;
     --muted:#5f6368;
     --rule:#e6e6e6;
+
+    --hoverLift: translateY(-1px);
+    --hoverShadow: 0 14px 34px rgba(0,0,0,.08);
   }
 
   *{ box-sizing:border-box; }
@@ -36,63 +64,128 @@
     background:var(--bg);
     color:var(--text);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
-    display:flex;
-    flex-direction:column;
-    min-height:100vh;
   }
 
   .wrap{
     max-width:1100px;
     margin:0 auto;
-    width:100%;
-    padding:72px 40px 0;
-  }
-  .wrap--footer{
-    padding:16px 40px 56px;
-    margin-top:auto;
-  }
-
-  .pageHead{
-    margin-bottom:40px;
-  }
-
-  h1{
-    margin:0 0 14px;
-    font-size:44px;
-    line-height:1.05;
-    letter-spacing:-0.02em;
+    padding:72px 40px 56px;
   }
 
   .backLink{
     display:inline-block;
-    margin-bottom:28px;
+    margin-bottom:22px;
     font-size:14px;
     color:var(--muted);
     text-decoration:none;
   }
   .backLink:hover{ color:var(--text); }
 
-  .lede{
-    font-size:18px;
-    line-height:1.65;
+  h1{
+    margin:0 0 10px;
+    font-size:52px;
+    line-height:1.02;
+    letter-spacing:-0.02em;
+  }
+
+  .intro{
+    font-size:17px;
+    line-height:1.6;
+    color:var(--muted);
     max-width:680px;
+    margin:0 0 34px;
+  }
+
+  .rule{
+    margin:40px 0 34px;
+    border:none;
+    border-top:1px solid var(--rule);
+  }
+
+  .card, .devItem{
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    will-change: transform;
+  }
+  .card:hover, .devItem:hover{
+    transform: var(--hoverLift);
+    box-shadow: var(--hoverShadow);
+    border-color: rgba(17,17,17,.14);
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:18px;
+  }
+
+  .card{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-radius:16px;
+    padding:20px 20px 18px;
+    box-shadow:0 10px 28px rgba(0,0,0,.06);
+  }
+
+  blockquote{
+    margin:0;
+    font-size:16px;
+    line-height:1.65;
     color:var(--text);
   }
 
-  /* Placeholder note — remove once real content is added */
-  .placeholder{
-    margin-top:36px;
-    padding:22px 24px;
-    border:1px dashed var(--rule);
-    border-radius:12px;
-    color:var(--muted);
-    font-size:15px;
-    line-height:1.6;
-    max-width:680px;
+  .byline{
+    margin-top:14px;
+    padding-top:14px;
+    border-top:1px solid rgba(230,230,230,.8);
+    display:flex;
+    flex-direction:column;
+    gap:2px;
   }
 
+  .name{ font-weight:600; letter-spacing:-0.01em; }
+  .title{ font-size:14px; color:var(--muted); line-height:1.45; }
+
+  .sectionTitle{
+    margin:0 0 14px;
+    font-size:18px;
+    letter-spacing:-0.01em;
+  }
+
+  .devList{
+    margin:0;
+    padding:0;
+    list-style:none;
+    display:grid;
+    gap:10px;
+    max-width:900px;
+  }
+
+  .devItem{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-radius:14px;
+    padding:14px 16px;
+  }
+
+  .devName{
+    display:inline-block;
+    font-size:15px;
+    line-height:1.45;
+    font-weight:600;
+    color:var(--text);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+    padding-bottom:1px;
+    transition: color .15s ease, border-color .15s ease;
+  }
+  .devName:hover{ color:var(--text); border-bottom-color: rgba(17,17,17,.45); }
+
+  .devMeta{ margin-top:4px; font-size:14px; color:var(--muted); line-height:1.45; }
+
   footer{
+    margin-top:44px;
     padding-top:18px;
+    border-top:1px solid var(--rule);
     display:grid;
     grid-template-columns: 1fr auto 1fr;
     align-items:center;
@@ -115,10 +208,7 @@
     padding-bottom:1px;
     transition: color .15s ease, border-color .15s ease;
   }
-  .footerLink:hover{
-    color:var(--text);
-    border-bottom-color: rgba(17,17,17,.45);
-  }
+  .footerLink:hover{ color:var(--text); border-bottom-color: rgba(17,17,17,.45); }
 
   .dot{ color: rgba(95,99,104,.7); }
 
@@ -130,29 +220,20 @@
     gap:10px;
   }
 
-  .copyright{
-    justify-self:end;
-    font-size:14px;
-    color:var(--muted);
-  }
+  .copyright{ justify-self:end; font-size:14px; color:var(--muted); }
 
   @media (max-width: 980px){
-    .wrap{ padding:56px 28px 0; }
-    .wrap--footer{ padding:14px 28px 48px; }
-    h1{ font-size:38px; }
-
-    footer{
-      grid-template-columns: 1fr;
-      justify-items:start;
-      gap:10px;
-    }
+    .wrap{ padding:56px 28px 48px; }
+    h1{ font-size:44px; }
+    .grid{ grid-template-columns: 1fr; }
+    footer{ grid-template-columns: 1fr; justify-items:start; gap:10px; }
     .navCenter{ justify-self:start; }
     .copyright{ justify-self:start; }
   }
 
-  @media (max-width: 520px){
-    h1{ font-size:32px; }
-    .lede{ font-size:17px; }
+  @media (prefers-reduced-motion: reduce){
+    .card, .devItem{ transition:none; }
+    .card:hover, .devItem:hover{ transform:none; }
   }
 </style>
 </head>
@@ -160,19 +241,133 @@
 <body>
   <main class="wrap">
     <a class="backLink" href="/">&larr; Tyler Borchers</a>
-    <div class="pageHead">
-      <h1>Recognition</h1>
+    <h1>Recognition</h1>
+    <p class="intro">Endorsements from colleagues and leaders I&rsquo;ve worked with, and executive development programs I&rsquo;ve been selected for.</p>
+
+    <div class="grid">
+
+      <div class="card">
+        <blockquote>
+          I worked with Tyler Borchers at Religion News Service, where he led audience and operations, and I really enjoyed collaborating with him. Tyler has a gift for talking about technology and audience strategy in a way that&rsquo;s accessible to anyone in the room, whether that&rsquo;s editorial, product, or leadership. He also brings a steady stream of ideas. He spotted a competitive Google News Initiative AI grant early, built internal alignment to pursue it, and helped land RNS a spot as one of 12 publishers selected from hundreds of applicants. He also led our website redesign, a big lift that required buy-in across the organization and resulted in a much stronger experience for our audience. Beyond the work, Tyler is genuinely kind and thoughtful, and a pleasure to be around. Any team would be lucky to have him.
+        </blockquote>
+        <div class="byline">
+          <div class="name">Trish Rodriguez Terrell</div>
+          <div class="title">Chief Development Officer, RNS</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <blockquote>
+          Tyler is energized by the intersection of audience strategy, analytics, product, and AI. While at RNS, he co-led RNS&rsquo;s successful $50,000 JournalismAI Innovation Challenge grant application and the project that followed. And he launched RNS Games, our first audience experiment outside traditional news formats. What stands out about Tyler is his &ldquo;let&rsquo;s try it&rdquo; instinct. He was ahead of most of the team on AI, leading adoption of multiple tools, running an internal AI position statement process, and coaching colleagues individually. He&rsquo;d be a strong addition to any newsroom serious about audience growth and responsible AI integration.
+        </blockquote>
+        <div class="byline">
+          <div class="name">Deborah Caldwell</div>
+          <div class="title">CEO &amp; Publisher, RNS</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <blockquote>
+          Tyler joined the team as we were spinning up a new brand content division focused on longer form content. His strategic input, cross-functional project management skills, experience with audience development, and ability to balance multiple goals at once helped make that effort far more impactful for our business. Tyler is positive, a fast learner, organized, adaptable, and is great at synthesizing and incorporating stakeholder feedback. Tyler was truly a great teammate to all of us.
+        </blockquote>
+        <div class="byline">
+          <div class="name">Dan Mills</div>
+          <div class="title">VP of Marketing, Wistia</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <blockquote>
+          What makes Tyler so effective at driving audience is his unique understanding of the digital landscape. He was a reliable source of strategic insights that helped a key customer double its email audience. He made their business more resilient and challenged them to review campaigns that weren&rsquo;t working just as often as he celebrated their winning efforts. I would highly recommend Tyler to any business seeking a strategic thinker with strong audience development skills and superior command of digital and social media.
+        </blockquote>
+        <div class="byline">
+          <div class="name">Oliver Knowlton</div>
+          <div class="title">Chief Operating Officer, AccuWeather</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <blockquote>
+          I worked with Tyler on audience development, audience engagement, and digital strategy for over two years at a 90+-year-old nonprofit newsroom. Tyler is both a brilliant leader and a great team member, regularly leading meetings, strategy and brainstorming sessions, and long-term planning discussions. He delved deep into the challenges and opportunities within our organization using data, qualitative feedback, and research on the top trends of the day. What stands out to me more than anything is how excellent of a teacher he is. He was always more than happy to explain anything he was working on, lend insight into industry standards, and work on special projects that went above and beyond his stated duties.
+        </blockquote>
+        <div class="byline">
+          <div class="name">Emily Churchill</div>
+          <div class="title">Director of Operations, RNS</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <blockquote>
+          Tyler is a roll-up-his-sleeves, deeply technical marketer who knows every tool and tactic to develop an audience. He easily moves from strategy to execution with an enthusiasm for audience development that makes him an invaluable asset to any team. I loved working with him and would readily recommend his work.
+        </blockquote>
+        <div class="byline">
+          <div class="name">Jessica Angell Carlson</div>
+          <div class="title">Director of Product Marketing, Wistia</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <blockquote>
+          Tyler is a consummate digital media professional. Having worked with him across two companies, one Big Media and one a digital upstart, I can say with confidence that Tyler is a major asset to a team of any size. He is a creative and strategic thinker, detail-oriented, and one of the best workers and team players I&rsquo;ve had the pleasure of calling a colleague. Tyler possesses a deep knowledge of social media, digital distribution, and the media industry in general. In a rapidly changing landscape, Tyler can help your organization adapt and thrive.
+        </blockquote>
+        <div class="byline">
+          <div class="name">Ryan Sager</div>
+          <div class="title">VP of Content, Ladders</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <blockquote>
+          Tyler is extremely organized, thoughtful, and customer focused. He brings a wealth of knowledge of developing audiences and amplifying branded content through both paid and organic channels. Tyler is also a collaborative team member, always looking to help others, keep projects moving forward, and coming up with new ideas to bring life to a brand. Tyler&rsquo;s contributions to multiple large initiatives were instrumental to the success of each.
+        </blockquote>
+        <div class="byline">
+          <div class="name">Taylor Corrado</div>
+          <div class="title">Senior Director of Brand Marketing, Wistia</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <blockquote>
+          Tyler is a hardworking, talented individual who would be a wise addition to any team or project. He brings valuable insights into not just the immediate work at hand, but the bigger picture behind the daily work as well.
+        </blockquote>
+        <div class="byline">
+          <div class="name">Alex Fitzpatrick</div>
+          <div class="title">Deputy Director of News, TIME, Fortune &amp; Money</div>
+        </div>
+      </div>
+
     </div>
 
-    <p class="lede">Endorsements and recognition from colleagues and collaborators.</p>
+    <hr class="rule" />
 
-    <!-- Replace this block with your real testimonials/endorsements content -->
-    <div class="placeholder">
-      Testimonials and endorsements will go here. Remove this dashed box once you add real content.
-    </div>
-  </main>
+    <h2 class="sectionTitle">Executive development</h2>
+    <ul class="devList">
+      <li class="devItem">
+        <a class="devName" href="https://www.journalismai.info/blog/meet-12-publishers-awarded-ai-innovation-grants" target="_blank" rel="noopener">
+          Project Director, JournalismAI Innovation Challenge
+        </a>
+        <div class="devMeta">London School of Economics (2026)</div>
+      </li>
+      <li class="devItem">
+        <a class="devName" href="https://newsproduct.org/blog/introducing-the-fourth-cohort-of-the-news-product-management-certification" target="_blank" rel="noopener">
+          News Product Management Certification
+        </a>
+        <div class="devMeta">News Product Alliance (2025)</div>
+      </li>
+      <li class="devItem">
+        <a class="devName" href="https://thewholestory.solutionsjournalism.org/introducing-the-second-solutions-journalism-revenue-accelerator-cohort-e7285a28c1f5" target="_blank" rel="noopener">
+          Solutions Journalism Revenue Accelerator
+        </a>
+        <div class="devMeta">Blue Engine Collaborative (2025)</div>
+      </li>
+      <li class="devItem">
+        <a class="devName" href="https://www.poynter.org/from-the-institute/2024/poynter-2024-essential-skills-for-rising-newsroom-leaders-cohort/" target="_blank" rel="noopener">
+          Essential Skills for Newsroom Leaders
+        </a>
+        <div class="devMeta">Poynter Institute (2024)</div>
+      </li>
+    </ul>
 
-  <div class="wrap wrap--footer">
     <footer>
       <div class="socialText">
         <a class="footerLink" href="https://www.linkedin.com/in/tylerborchers/" target="_blank" rel="noopener">LinkedIn</a>
@@ -183,13 +378,13 @@
       </div>
 
       <nav class="navCenter" aria-label="Site pages">
-        <a class="footerLink" href="/recognition/">Recognition</a>
+        <a class="footerLink" href="/">Home</a>
         <span class="dot">·</span>
         <a class="footerLink" href="/contact/">Contact</a>
       </nav>
 
       <div class="copyright">&copy; 2026 Tyler Borchers</div>
     </footer>
-  </div>
+  </main>
 </body>
 </html>
