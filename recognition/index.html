@@ -9,20 +9,17 @@
 <meta name="author" content="Tyler Borchers" />
 <link rel="canonical" href="https://tylerborchers.com/recognition/" />
 
-<!-- Open Graph -->
 <meta property="og:title" content="Recognition — Tyler Borchers" />
 <meta property="og:description" content="Endorsements from colleagues and leaders, plus executive development programs." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://tylerborchers.com/recognition/" />
 <meta property="og:image" content="https://i.imgur.com/xTV4C51.jpeg" />
 
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Recognition — Tyler Borchers" />
 <meta name="twitter:description" content="Endorsements from colleagues and leaders, plus executive development programs." />
 <meta name="twitter:image" content="https://i.imgur.com/xTV4C51.jpeg" />
 
-<!-- schema.org Person markup with credentials for AEO -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -52,8 +49,6 @@
     --text:#111;
     --muted:#5f6368;
     --rule:#e6e6e6;
-
-    --hoverLift: translateY(-1px);
     --hoverShadow: 0 14px 34px rgba(0,0,0,.08);
   }
 
@@ -82,40 +77,28 @@
   .backLink:hover{ color:var(--text); }
 
   h1{
-    margin:0 0 10px;
+    margin:0 0 40px;
     font-size:52px;
     line-height:1.02;
     letter-spacing:-0.02em;
   }
 
-  .intro{
-    font-size:17px;
-    line-height:1.6;
-    color:var(--muted);
-    max-width:680px;
-    margin:0 0 34px;
+  .sectionTitle{
+    margin:0 0 18px;
+    font-size:22px;
+    letter-spacing:-0.015em;
+    font-weight:650;
   }
 
   .rule{
-    margin:40px 0 34px;
+    margin:46px 0 34px;
     border:none;
     border-top:1px solid var(--rule);
   }
 
-  .card, .devItem{
-    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-    will-change: transform;
-  }
-  .card:hover, .devItem:hover{
-    transform: var(--hoverLift);
-    box-shadow: var(--hoverShadow);
-    border-color: rgba(17,17,17,.14);
-  }
-
-  .grid{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap:18px;
+  .masonry{
+    column-count:2;
+    column-gap:18px;
   }
 
   .card{
@@ -124,6 +107,15 @@
     border-radius:16px;
     padding:20px 20px 18px;
     box-shadow:0 10px 28px rgba(0,0,0,.06);
+    break-inside:avoid;
+    margin-bottom:18px;
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    will-change: transform;
+  }
+  .card:hover{
+    transform: translateY(-1px);
+    box-shadow: var(--hoverShadow);
+    border-color: rgba(17,17,17,.14);
   }
 
   blockquote{
@@ -145,26 +137,26 @@
   .name{ font-weight:600; letter-spacing:-0.01em; }
   .title{ font-size:14px; color:var(--muted); line-height:1.45; }
 
-  .sectionTitle{
-    margin:0 0 14px;
-    font-size:18px;
-    letter-spacing:-0.01em;
-  }
-
   .devList{
     margin:0;
     padding:0;
     list-style:none;
-    display:grid;
-    gap:10px;
-    max-width:900px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
   }
 
   .devItem{
     background:var(--card);
     border:1px solid var(--rule);
     border-radius:14px;
-    padding:14px 16px;
+    padding:14px 18px;
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  .devItem:hover{
+    transform: translateY(-1px);
+    box-shadow: var(--hoverShadow);
+    border-color: rgba(17,17,17,.14);
   }
 
   .devName{
@@ -225,7 +217,7 @@
   @media (max-width: 980px){
     .wrap{ padding:56px 28px 48px; }
     h1{ font-size:44px; }
-    .grid{ grid-template-columns: 1fr; }
+    .masonry{ column-count:1; }
     footer{ grid-template-columns: 1fr; justify-items:start; gap:10px; }
     .navCenter{ justify-self:start; }
     .copyright{ justify-self:start; }
@@ -242,9 +234,9 @@
   <main class="wrap">
     <a class="backLink" href="/">&larr; Tyler Borchers</a>
     <h1>Recognition</h1>
-    <p class="intro">Endorsements from colleagues and leaders I&rsquo;ve worked with, and executive development programs I&rsquo;ve been selected for.</p>
 
-    <div class="grid">
+    <h2 class="sectionTitle">Endorsements</h2>
+    <div class="masonry">
 
       <div class="card">
         <blockquote>
@@ -258,21 +250,11 @@
 
       <div class="card">
         <blockquote>
-          Tyler is energized by the intersection of audience strategy, analytics, product, and AI. While at RNS, he co-led RNS&rsquo;s successful $50,000 JournalismAI Innovation Challenge grant application and the project that followed. And he launched RNS Games, our first audience experiment outside traditional news formats. What stands out about Tyler is his &ldquo;let&rsquo;s try it&rdquo; instinct. He was ahead of most of the team on AI, leading adoption of multiple tools, running an internal AI position statement process, and coaching colleagues individually. He&rsquo;d be a strong addition to any newsroom serious about audience growth and responsible AI integration.
-        </blockquote>
-        <div class="byline">
-          <div class="name">Deborah Caldwell</div>
-          <div class="title">CEO &amp; Publisher, RNS</div>
-        </div>
-      </div>
-
-      <div class="card">
-        <blockquote>
           Tyler joined the team as we were spinning up a new brand content division focused on longer form content. His strategic input, cross-functional project management skills, experience with audience development, and ability to balance multiple goals at once helped make that effort far more impactful for our business. Tyler is positive, a fast learner, organized, adaptable, and is great at synthesizing and incorporating stakeholder feedback. Tyler was truly a great teammate to all of us.
         </blockquote>
         <div class="byline">
           <div class="name">Dan Mills</div>
-          <div class="title">VP of Marketing, Wistia</div>
+          <div class="title">Vice President of Marketing, Wistia</div>
         </div>
       </div>
 
@@ -288,16 +270,6 @@
 
       <div class="card">
         <blockquote>
-          I worked with Tyler on audience development, audience engagement, and digital strategy for over two years at a 90+-year-old nonprofit newsroom. Tyler is both a brilliant leader and a great team member, regularly leading meetings, strategy and brainstorming sessions, and long-term planning discussions. He delved deep into the challenges and opportunities within our organization using data, qualitative feedback, and research on the top trends of the day. What stands out to me more than anything is how excellent of a teacher he is. He was always more than happy to explain anything he was working on, lend insight into industry standards, and work on special projects that went above and beyond his stated duties.
-        </blockquote>
-        <div class="byline">
-          <div class="name">Emily Churchill</div>
-          <div class="title">Director of Operations, RNS</div>
-        </div>
-      </div>
-
-      <div class="card">
-        <blockquote>
           Tyler is a roll-up-his-sleeves, deeply technical marketer who knows every tool and tactic to develop an audience. He easily moves from strategy to execution with an enthusiasm for audience development that makes him an invaluable asset to any team. I loved working with him and would readily recommend his work.
         </blockquote>
         <div class="byline">
@@ -308,11 +280,41 @@
 
       <div class="card">
         <blockquote>
+          Tyler is a hardworking, talented individual who would be a wise addition to any team or project. He brings valuable insights into not just the immediate work at hand, but the bigger picture behind the daily work as well.
+        </blockquote>
+        <div class="byline">
+          <div class="name">Alex Fitzpatrick</div>
+          <div class="title">Deputy News Director, TIME and Fortune</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <blockquote>
+          Tyler is energized by the intersection of audience strategy, analytics, product, and AI. While at RNS, he co-led RNS&rsquo;s successful $50,000 JournalismAI Innovation Challenge grant application and the project that followed. And he launched RNS Games, our first audience experiment outside traditional news formats. What stands out about Tyler is his &ldquo;let&rsquo;s try it&rdquo; instinct. He was ahead of most of the team on AI, leading adoption of multiple tools, running an internal AI position statement process, and coaching colleagues individually. He&rsquo;d be a strong addition to any newsroom serious about audience growth and responsible AI integration.
+        </blockquote>
+        <div class="byline">
+          <div class="name">Deborah Caldwell</div>
+          <div class="title">Chief Executive Officer &amp; Publisher, RNS</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <blockquote>
+          I worked with Tyler on audience development, audience engagement, and digital strategy for over two years at a 90+-year-old nonprofit newsroom. Tyler is both a brilliant leader and a great team member, regularly leading meetings, strategy and brainstorming sessions, and long-term planning discussions. He delved deep into the challenges and opportunities within our organization using data, qualitative feedback, and research on the top trends of the day. What stands out to me more than anything is how excellent of a teacher he is. He was always more than happy to explain anything he was working on, lend insight into industry standards, and work on special projects that went above and beyond his stated duties.
+        </blockquote>
+        <div class="byline">
+          <div class="name">Emily Churchill</div>
+          <div class="title">Director of Operations, RNS</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <blockquote>
           Tyler is a consummate digital media professional. Having worked with him across two companies, one Big Media and one a digital upstart, I can say with confidence that Tyler is a major asset to a team of any size. He is a creative and strategic thinker, detail-oriented, and one of the best workers and team players I&rsquo;ve had the pleasure of calling a colleague. Tyler possesses a deep knowledge of social media, digital distribution, and the media industry in general. In a rapidly changing landscape, Tyler can help your organization adapt and thrive.
         </blockquote>
         <div class="byline">
           <div class="name">Ryan Sager</div>
-          <div class="title">VP of Content, Ladders</div>
+          <div class="title">Vice President of Content, Ladders</div>
         </div>
       </div>
 
@@ -323,16 +325,6 @@
         <div class="byline">
           <div class="name">Taylor Corrado</div>
           <div class="title">Senior Director of Brand Marketing, Wistia</div>
-        </div>
-      </div>
-
-      <div class="card">
-        <blockquote>
-          Tyler is a hardworking, talented individual who would be a wise addition to any team or project. He brings valuable insights into not just the immediate work at hand, but the bigger picture behind the daily work as well.
-        </blockquote>
-        <div class="byline">
-          <div class="name">Alex Fitzpatrick</div>
-          <div class="title">Deputy Director of News, TIME, Fortune &amp; Money</div>
         </div>
       </div>
 
