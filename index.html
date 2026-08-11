@@ -6,6 +6,7 @@
 
 <meta name="description" content="Tyler leads teams that build products, grow audiences and drive revenue by responsibly applying AI. He owned digital strategy at TIME and VICE News." />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#fafafa" />
 <meta name="author" content="Tyler Borchers" />
 <link rel="canonical" href="https://tylerborchers.com/" />
 <link rel="icon" type="image/png" href="/favicon.png" />
@@ -28,36 +29,56 @@
 <meta name="twitter:image" content="https://i.imgur.com/xTV4C51.jpeg" />
 <meta name="twitter:image:alt" content="Tyler Borchers" />
 
-<!-- schema.org Person markup for AEO / Knowledge Graph -->
+<!-- Structured data: ProfilePage + Person (primary entity) and WebSite -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Tyler Borchers",
-  "url": "https://tylerborchers.com",
-  "image": "https://i.imgur.com/xTV4C51.jpeg",
-  "jobTitle": "SVP, Strategy & Operations",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "RNS"
-  },
-  "description": "Tyler Borchers is SVP, Strategy & Operations at RNS, where he owns core operating systems and leads cross-functional teams to build products, grow audiences and drive revenue by responsibly applying AI.",
-  "sameAs": [
-    "https://www.linkedin.com/in/tylerborchers",
-    "https://x.com/tylerborchers",
-    "https://bsky.app/profile/tylerborchers.com"
-  ],
-  "alumniOf": [
-    { "@type": "Organization", "name": "TIME" },
-    { "@type": "Organization", "name": "VICE News" }
-  ],
-  "knowsAbout": [
-    "Audience development",
-    "Product strategy",
-    "Revenue growth",
-    "Artificial intelligence",
-    "Digital media",
-    "Newsroom operations"
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": "https://tylerborchers.com/#profilepage",
+      "url": "https://tylerborchers.com/",
+      "name": "Tyler Borchers",
+      "isPartOf": { "@id": "https://tylerborchers.com/#website" },
+      "about": { "@id": "https://tylerborchers.com/#person" },
+      "primaryImageOfPage": "https://i.imgur.com/xTV4C51.jpeg"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://tylerborchers.com/#website",
+      "url": "https://tylerborchers.com/",
+      "name": "Tyler Borchers",
+      "publisher": { "@id": "https://tylerborchers.com/#person" },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://tylerborchers.com/#person",
+      "name": "Tyler Borchers",
+      "url": "https://tylerborchers.com/",
+      "image": "https://i.imgur.com/xTV4C51.jpeg",
+      "jobTitle": "SVP, Strategy & Operations",
+      "worksFor": { "@type": "Organization", "name": "RNS" },
+      "description": "Tyler Borchers is SVP, Strategy & Operations at RNS, where he leads cross-functional teams to build products, grow audiences and drive revenue by responsibly applying AI.",
+      "homeLocation": { "@type": "Place", "name": "New York, NY" },
+      "sameAs": [
+        "https://www.linkedin.com/in/tylerborchers",
+        "https://x.com/tylerborchers",
+        "https://bsky.app/profile/tylerborchers.com"
+      ],
+      "alumniOf": [
+        { "@type": "Organization", "name": "TIME" },
+        { "@type": "Organization", "name": "VICE News" }
+      ],
+      "knowsAbout": [
+        "Audience development",
+        "Product strategy",
+        "Revenue growth",
+        "Artificial intelligence",
+        "Digital media",
+        "Newsroom operations"
+      ]
+    }
   ]
 }
 </script>
@@ -78,6 +99,26 @@
     background:var(--bg);
     color:var(--text);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  }
+
+  /* Accessibility: skip link + visible keyboard focus */
+  .skip-link{
+    position:absolute;
+    left:-9999px;
+    top:0;
+    background:var(--text);
+    color:#fff;
+    padding:10px 16px;
+    z-index:100;
+    text-decoration:none;
+    border-radius:0 0 8px 0;
+  }
+  .skip-link:focus{ left:0; }
+
+  a:focus-visible{
+    outline:2px solid var(--text);
+    outline-offset:3px;
+    border-radius:3px;
   }
 
   .wrap{
@@ -265,11 +306,17 @@
     .logoItem.wistia, .logoItem.eurasia{ grid-column: span 3; }
     .logoItem.vice, .logoItem.verge{ grid-column: span 3; }
   }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ transition:none !important; animation:none !important; }
+    .portrait{ transform:none; }
+  }
 </style>
 </head>
 
 <body>
-  <main>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <main id="main-content">
     <div class="wrap">
       <section class="hero">
         <div>
@@ -283,7 +330,7 @@
         </div>
 
         <div class="portrait">
-          <img src="https://i.imgur.com/xTV4C51.jpeg" alt="Tyler Borchers headshot" />
+          <img src="https://i.imgur.com/xTV4C51.jpeg" alt="Portrait of Tyler Borchers" width="380" height="475" loading="eager" />
         </div>
       </section>
     </div>
@@ -292,13 +339,13 @@
       <div class="logoInner">
         <div class="logos">
           <!-- ORDER: TIME, Vox, Fortune, Wistia, Eurasia, Vice, The Verge -->
-          <div class="logoItem time"><img src="https://i.imgur.com/6VI40y0.png" alt="TIME"></div>
-          <div class="logoItem vox"><img src="https://i.imgur.com/1WWWpIE.png" alt="Vox Media"></div>
-          <div class="logoItem fortune"><img src="https://i.imgur.com/0P9EjKk.png" alt="Fortune"></div>
-          <div class="logoItem wistia"><img src="https://i.imgur.com/kodusrc.png" alt="Wistia"></div>
-          <div class="logoItem eurasia"><img class="eurasia" src="https://i.imgur.com/bv7FAbT.png" alt="Eurasia Group"></div>
-          <div class="logoItem vice"><img src="https://i.imgur.com/IAZrHeb.png" alt="VICE News"></div>
-          <div class="logoItem verge"><img src="https://i.imgur.com/MwRtH2F.png" alt="The Verge"></div>
+          <div class="logoItem time"><img src="https://i.imgur.com/6VI40y0.png" alt="TIME logo" loading="lazy"></div>
+          <div class="logoItem vox"><img src="https://i.imgur.com/1WWWpIE.png" alt="Vox Media logo" loading="lazy"></div>
+          <div class="logoItem fortune"><img src="https://i.imgur.com/0P9EjKk.png" alt="Fortune logo" loading="lazy"></div>
+          <div class="logoItem wistia"><img src="https://i.imgur.com/kodusrc.png" alt="Wistia logo" loading="lazy"></div>
+          <div class="logoItem eurasia"><img class="eurasia" src="https://i.imgur.com/bv7FAbT.png" alt="Eurasia Group logo" loading="lazy"></div>
+          <div class="logoItem vice"><img src="https://i.imgur.com/IAZrHeb.png" alt="VICE News logo" loading="lazy"></div>
+          <div class="logoItem verge"><img src="https://i.imgur.com/MwRtH2F.png" alt="The Verge logo" loading="lazy"></div>
         </div>
       </div>
     </section>
@@ -308,15 +355,15 @@
     <footer>
       <div class="socialText">
         <a class="footerLink" href="https://www.linkedin.com/in/tylerborchers/" target="_blank" rel="noopener">LinkedIn</a>
-        <span class="dot">·</span>
+        <span class="dot" aria-hidden="true">·</span>
         <a class="footerLink" href="https://x.com/tylerborchers" target="_blank" rel="noopener">X</a>
-        <span class="dot">·</span>
+        <span class="dot" aria-hidden="true">·</span>
         <a class="footerLink" href="https://bsky.app/profile/tylerborchers.com" target="_blank" rel="noopener">Bluesky</a>
       </div>
 
       <nav class="navCenter" aria-label="Site pages">
         <a class="footerLink" href="/recognition/">Recognition</a>
-        <span class="dot">·</span>
+        <span class="dot" aria-hidden="true">·</span>
         <a class="footerLink" href="/contact/">Contact</a>
       </nav>
 
