@@ -6,6 +6,7 @@
 
 <meta name="description" content="Send a direct message on any of these platforms." />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#fafafa" />
 <meta name="author" content="Tyler Borchers" />
 <link rel="canonical" href="https://tylerborchers.com/contact/" />
 <link rel="icon" type="image/png" href="/favicon.png" />
@@ -25,6 +26,44 @@
 <meta name="twitter:description" content="Send a direct message on any of these platforms." />
 <meta name="twitter:image" content="https://i.imgur.com/xTV4C51.jpeg" />
 <meta name="twitter:image:alt" content="Tyler Borchers" />
+
+<!-- Structured data: ContactPage + Person, WebPage, Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "@id": "https://tylerborchers.com/contact/#webpage",
+      "url": "https://tylerborchers.com/contact/",
+      "name": "Contact | Tyler Borchers",
+      "about": { "@id": "https://tylerborchers.com/#person" },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://tylerborchers.com/contact/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tylerborchers.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://tylerborchers.com/contact/" }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://tylerborchers.com/#person",
+      "name": "Tyler Borchers",
+      "url": "https://tylerborchers.com/",
+      "jobTitle": "SVP, Strategy & Operations",
+      "worksFor": { "@type": "Organization", "name": "RNS" },
+      "sameAs": [
+        "https://www.linkedin.com/in/tylerborchers",
+        "https://x.com/tylerborchers",
+        "https://bsky.app/profile/tylerborchers.com"
+      ]
+    }
+  ]
+}
+</script>
 
 <style>
   :root{
@@ -46,6 +85,25 @@
     display:flex;
     flex-direction:column;
     min-height:100vh;
+  }
+
+  .skip-link{
+    position:absolute;
+    left:-9999px;
+    top:0;
+    background:var(--text);
+    color:#fff;
+    padding:10px 16px;
+    z-index:100;
+    text-decoration:none;
+    border-radius:0 0 8px 0;
+  }
+  .skip-link:focus{ left:0; }
+
+  a:focus-visible{
+    outline:2px solid var(--text);
+    outline-offset:3px;
+    border-radius:3px;
   }
 
   .wrap{
@@ -167,34 +225,14 @@
   }
 
   @media (prefers-reduced-motion: reduce){
-    .channel{ transition:none; }
-    .channel:hover{ transform:none; }
+    *{ transition:none !important; animation:none !important; }
   }
 </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  "url": "https://tylerborchers.com/contact/",
-  "name": "Contact Tyler Borchers",
-  "mainEntity": {
-    "@type": "Person",
-    "name": "Tyler Borchers",
-    "url": "https://tylerborchers.com",
-    "jobTitle": "SVP, Strategy & Operations",
-    "worksFor": { "@type": "Organization", "name": "RNS" },
-    "sameAs": [
-      "https://www.linkedin.com/in/tylerborchers",
-      "https://x.com/tylerborchers",
-      "https://bsky.app/profile/tylerborchers.com"
-    ]
-  }
-}
-</script>
 </head>
 
 <body>
-  <main class="wrap">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <main class="wrap" id="main-content">
     <a class="backLink" href="/">&larr; Tyler Borchers</a>
     <h1>Contact</h1>
     <p class="lede">You can reach me by direct message on any of the platforms below.</p>
@@ -219,15 +257,15 @@
     <footer>
       <div class="socialText">
         <a class="footerLink" href="https://www.linkedin.com/in/tylerborchers/" target="_blank" rel="noopener">LinkedIn</a>
-        <span class="dot">·</span>
+        <span class="dot" aria-hidden="true">·</span>
         <a class="footerLink" href="https://x.com/tylerborchers" target="_blank" rel="noopener">X</a>
-        <span class="dot">·</span>
+        <span class="dot" aria-hidden="true">·</span>
         <a class="footerLink" href="https://bsky.app/profile/tylerborchers.com" target="_blank" rel="noopener">Bluesky</a>
       </div>
 
       <nav class="navCenter" aria-label="Site pages">
         <a class="footerLink" href="/">Home</a>
-        <span class="dot">·</span>
+        <span class="dot" aria-hidden="true">·</span>
         <a class="footerLink" href="/recognition/">Recognition</a>
       </nav>
 
