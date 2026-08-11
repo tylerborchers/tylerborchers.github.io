@@ -6,6 +6,7 @@
 
 <meta name="description" content="Read endorsements from former managers and clients." />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#fafafa" />
 <meta name="author" content="Tyler Borchers" />
 <link rel="canonical" href="https://tylerborchers.com/recognition/" />
 <link rel="icon" type="image/png" href="/favicon.png" />
@@ -26,132 +27,56 @@
 <meta name="twitter:image" content="https://i.imgur.com/xTV4C51.jpeg" />
 <meta name="twitter:image:alt" content="Tyler Borchers" />
 
+<!-- Structured data: Person with reviews + credentials, WebPage, Breadcrumb -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Tyler Borchers",
-  "url": "https://tylerborchers.com",
-  "jobTitle": "SVP, Strategy & Operations",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "RNS"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/in/tylerborchers",
-    "https://x.com/tylerborchers",
-    "https://bsky.app/profile/tylerborchers.com"
-  ],
-  "hasCredential": [
+  "@graph": [
     {
-      "@type": "EducationalOccupationalCredential",
-      "name": "Project Director, JournalismAI Innovation Challenge",
-      "recognizedBy": {
-        "@type": "Organization",
-        "name": "London School of Economics"
-      },
-      "dateCreated": "2026"
+      "@type": "WebPage",
+      "@id": "https://tylerborchers.com/recognition/#webpage",
+      "url": "https://tylerborchers.com/recognition/",
+      "name": "Recognition | Tyler Borchers",
+      "about": { "@id": "https://tylerborchers.com/#person" },
+      "inLanguage": "en-US"
     },
     {
-      "@type": "EducationalOccupationalCredential",
-      "name": "News Product Management Certification",
-      "recognizedBy": {
-        "@type": "Organization",
-        "name": "News Product Alliance"
-      },
-      "dateCreated": "2025"
+      "@type": "BreadcrumbList",
+      "@id": "https://tylerborchers.com/recognition/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tylerborchers.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Recognition", "item": "https://tylerborchers.com/recognition/" }
+      ]
     },
     {
-      "@type": "EducationalOccupationalCredential",
-      "name": "Solutions Journalism Revenue Accelerator",
-      "recognizedBy": {
-        "@type": "Organization",
-        "name": "Blue Engine Collaborative"
-      },
-      "dateCreated": "2025"
-    },
-    {
-      "@type": "EducationalOccupationalCredential",
-      "name": "Essential Skills for Newsroom Leaders",
-      "recognizedBy": {
-        "@type": "Organization",
-        "name": "Poynter Institute"
-      },
-      "dateCreated": "2024"
-    }
-  ],
-  "review": [
-    {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Trish Rodriguez Terrell",
-        "jobTitle": "Chief Development Officer, RNS"
-      }
-    },
-    {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Deborah Caldwell",
-        "jobTitle": "Chief Executive Officer & Publisher, RNS"
-      }
-    },
-    {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Dan Mills",
-        "jobTitle": "Vice President of Marketing, Wistia"
-      }
-    },
-    {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Oliver Knowlton",
-        "jobTitle": "Chief Operating Officer, AccuWeather"
-      }
-    },
-    {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Emily Churchill",
-        "jobTitle": "Director of Operations, RNS"
-      }
-    },
-    {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Jessica Angell Carlson",
-        "jobTitle": "Director of Product Marketing, Wistia"
-      }
-    },
-    {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Ryan Sager",
-        "jobTitle": "Vice President of Content, Ladders"
-      }
-    },
-    {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Taylor Corrado",
-        "jobTitle": "Senior Director of Brand Marketing, Wistia"
-      }
-    },
-    {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Alex Fitzpatrick",
-        "jobTitle": "Deputy News Director, TIME and Fortune"
-      }
+      "@type": "Person",
+      "@id": "https://tylerborchers.com/#person",
+      "name": "Tyler Borchers",
+      "url": "https://tylerborchers.com/",
+      "jobTitle": "SVP, Strategy & Operations",
+      "worksFor": { "@type": "Organization", "name": "RNS" },
+      "sameAs": [
+        "https://www.linkedin.com/in/tylerborchers",
+        "https://x.com/tylerborchers",
+        "https://bsky.app/profile/tylerborchers.com"
+      ],
+      "hasCredential": [
+        { "@type": "EducationalOccupationalCredential", "name": "Project Director, JournalismAI Innovation Challenge", "recognizedBy": { "@type": "Organization", "name": "London School of Economics" }, "dateCreated": "2026" },
+        { "@type": "EducationalOccupationalCredential", "name": "News Product Management Certification", "recognizedBy": { "@type": "Organization", "name": "News Product Alliance" }, "dateCreated": "2025" },
+        { "@type": "EducationalOccupationalCredential", "name": "Solutions Journalism Revenue Accelerator", "recognizedBy": { "@type": "Organization", "name": "Blue Engine Collaborative" }, "dateCreated": "2025" },
+        { "@type": "EducationalOccupationalCredential", "name": "Essential Skills for Newsroom Leaders", "recognizedBy": { "@type": "Organization", "name": "Poynter Institute" }, "dateCreated": "2024" }
+      ],
+      "review": [
+        { "@type": "Review", "author": { "@type": "Person", "name": "Trish Rodriguez Terrell", "jobTitle": "Chief Development Officer, RNS" } },
+        { "@type": "Review", "author": { "@type": "Person", "name": "Deborah Caldwell", "jobTitle": "Chief Executive Officer & Publisher, RNS" } },
+        { "@type": "Review", "author": { "@type": "Person", "name": "Dan Mills", "jobTitle": "Vice President of Marketing, Wistia" } },
+        { "@type": "Review", "author": { "@type": "Person", "name": "Oliver Knowlton", "jobTitle": "Chief Operating Officer, AccuWeather" } },
+        { "@type": "Review", "author": { "@type": "Person", "name": "Emily Churchill", "jobTitle": "Director of Operations, RNS" } },
+        { "@type": "Review", "author": { "@type": "Person", "name": "Jessica Angell Carlson", "jobTitle": "Director of Product Marketing, Wistia" } },
+        { "@type": "Review", "author": { "@type": "Person", "name": "Ryan Sager", "jobTitle": "Vice President of Content, Ladders" } },
+        { "@type": "Review", "author": { "@type": "Person", "name": "Taylor Corrado", "jobTitle": "Senior Director of Brand Marketing, Wistia" } },
+        { "@type": "Review", "author": { "@type": "Person", "name": "Alex Fitzpatrick", "jobTitle": "Deputy News Director, TIME and Fortune" } }
+      ]
     }
   ]
 }
@@ -174,6 +99,25 @@
     background:var(--bg);
     color:var(--text);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  }
+
+  .skip-link{
+    position:absolute;
+    left:-9999px;
+    top:0;
+    background:var(--text);
+    color:#fff;
+    padding:10px 16px;
+    z-index:100;
+    text-decoration:none;
+    border-radius:0 0 8px 0;
+  }
+  .skip-link:focus{ left:0; }
+
+  a:focus-visible{
+    outline:2px solid var(--text);
+    outline-offset:3px;
+    border-radius:3px;
   }
 
   .wrap{
@@ -339,14 +283,14 @@
   }
 
   @media (prefers-reduced-motion: reduce){
-    .card, .devItem{ transition:none; }
-    .card:hover, .devItem:hover{ transform:none; }
+    *{ transition:none !important; animation:none !important; }
   }
 </style>
 </head>
 
 <body>
-  <main class="wrap">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <main class="wrap" id="main-content">
     <a class="backLink" href="/">&larr; Tyler Borchers</a>
     <h1>Recognition</h1>
 
@@ -478,15 +422,15 @@
     <footer>
       <div class="socialText">
         <a class="footerLink" href="https://www.linkedin.com/in/tylerborchers/" target="_blank" rel="noopener">LinkedIn</a>
-        <span class="dot">·</span>
+        <span class="dot" aria-hidden="true">·</span>
         <a class="footerLink" href="https://x.com/tylerborchers" target="_blank" rel="noopener">X</a>
-        <span class="dot">·</span>
+        <span class="dot" aria-hidden="true">·</span>
         <a class="footerLink" href="https://bsky.app/profile/tylerborchers.com" target="_blank" rel="noopener">Bluesky</a>
       </div>
 
       <nav class="navCenter" aria-label="Site pages">
         <a class="footerLink" href="/">Home</a>
-        <span class="dot">·</span>
+        <span class="dot" aria-hidden="true">·</span>
         <a class="footerLink" href="/contact/">Contact</a>
       </nav>
 
