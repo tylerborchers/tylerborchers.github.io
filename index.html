@@ -9,15 +9,24 @@
 <meta name="theme-color" content="#fafafa" />
 <meta name="author" content="Tyler Borchers" />
 <link rel="canonical" href="https://tylerborchers.com/" />
-<link rel="icon" type="image/png" href="/favicon.png" />
+
+<!-- Favicons -->
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<!-- Preload LCP portrait -->
+<link rel="preload" as="image" href="/images/tyler-borchers-800.webp" type="image/webp" fetchpriority="high" />
 
 <!-- Open Graph -->
 <meta property="og:title" content="Tyler Borchers | product, audience, revenue and AI leader" />
 <meta property="og:description" content="Tyler leads teams that build products, grow audiences and drive revenue by responsibly applying AI. He owned digital strategy at TIME and VICE News." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://tylerborchers.com/" />
-<meta property="og:image" content="https://i.imgur.com/xTV4C51.jpeg" />
+<meta property="og:image" content="https://tylerborchers.com/images/tyler-borchers-og.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Tyler Borchers" />
 <meta property="og:site_name" content="Tyler Borchers" />
 <meta property="og:locale" content="en_US" />
@@ -26,7 +35,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Tyler Borchers | product, audience, revenue and AI leader" />
 <meta name="twitter:description" content="Tyler leads teams that build products, grow audiences and drive revenue by responsibly applying AI. He owned digital strategy at TIME and VICE News." />
-<meta name="twitter:image" content="https://i.imgur.com/xTV4C51.jpeg" />
+<meta name="twitter:image" content="https://tylerborchers.com/images/tyler-borchers-og.jpg" />
 <meta name="twitter:image:alt" content="Tyler Borchers" />
 
 <!-- Structured data: ProfilePage + Person (primary entity) and WebSite -->
@@ -40,14 +49,14 @@
       "url": "https://tylerborchers.com/",
       "name": "Tyler Borchers",
       "dateCreated": "2026-08-07T00:00:00-04:00",
-      "dateModified": "2026-08-10T00:00:00-04:00",
+      "dateModified": "2026-08-14T00:00:00-04:00",
       "isPartOf": {
         "@id": "https://tylerborchers.com/#website"
       },
       "mainEntity": {
         "@id": "https://tylerborchers.com/#person"
       },
-      "primaryImageOfPage": "https://i.imgur.com/xTV4C51.jpeg"
+      "primaryImageOfPage": "https://tylerborchers.com/images/tyler-borchers-1x1.jpg"
     },
     {
       "@type": "WebSite",
@@ -64,7 +73,7 @@
       "@id": "https://tylerborchers.com/#person",
       "name": "Tyler Borchers",
       "url": "https://tylerborchers.com/",
-      "image": "https://i.imgur.com/xTV4C51.jpeg",
+      "image": "https://tylerborchers.com/images/tyler-borchers-1x1.jpg",
       "jobTitle": "SVP, Strategy & Operations",
       "worksFor": {
         "@type": "Organization",
@@ -177,16 +186,24 @@
     background:var(--card);
     box-shadow:0 14px 40px rgba(0,0,0,.10);
     transform: translateY(-6px);
+    aspect-ratio: 4 / 5;
   }
 
   .portrait img{
     width:100%;
-    height:auto;
+    height:100%;
     display:block;
     object-fit:cover;
-    object-position:center top;
+    object-position:center 18%;
     filter: grayscale(100%) contrast(1.05);
     -webkit-filter: grayscale(100%) contrast(1.05);
+    transition: filter .5s ease, transform .6s ease;
+  }
+  .portrait:hover img,
+  .portrait:focus-within img{
+    filter: grayscale(0) contrast(1);
+    -webkit-filter: grayscale(0) contrast(1);
+    transform: scale(1.03);
   }
 
   /* Full-bleed logo band */
@@ -227,15 +244,25 @@
     height:auto;
     display:block;
     object-fit:contain;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    opacity:.62;
+    transition: opacity .3s ease, filter .3s ease, transform .3s ease;
+  }
+  .logoItem img:hover{
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    opacity:1;
+    transform: scale(1.04);
   }
 
   .logoItem img.eurasia{
     transform:scale(1.22);
     transform-origin:center;
   }
-
-  .logoItem img{ transition: opacity .15s ease; }
-  .logoItem img:hover{ opacity: .78; }
+  .logoItem img.eurasia:hover{
+    transform:scale(1.27);
+  }
 
   /* Footer: Social left, Nav center, Copyright right */
   footer{
@@ -330,6 +357,7 @@
   @media (prefers-reduced-motion: reduce){
     *{ transition:none !important; animation:none !important; }
     .portrait{ transform:none; }
+    .portrait img{ transform:none !important; }
   }
 </style>
 </head>
@@ -350,7 +378,19 @@
         </div>
 
         <div class="portrait">
-          <img src="https://i.imgur.com/xTV4C51.jpeg" alt="Portrait of Tyler Borchers" width="380" height="475" loading="eager" />
+          <picture>
+            <source
+              type="image/webp"
+              srcset="/images/tyler-borchers-400.webp 400w, /images/tyler-borchers-800.webp 800w, /images/tyler-borchers-1200.webp 1200w"
+              sizes="(max-width: 980px) 360px, 380px" />
+            <img
+              src="/images/tyler-borchers-800.jpg"
+              srcset="/images/tyler-borchers-400.jpg 400w, /images/tyler-borchers-800.jpg 800w, /images/tyler-borchers-1200.jpg 1200w"
+              sizes="(max-width: 980px) 360px, 380px"
+              alt="Portrait of Tyler Borchers"
+              width="1200" height="1200"
+              loading="eager" fetchpriority="high" decoding="async" />
+          </picture>
         </div>
       </section>
     </div>
@@ -359,13 +399,13 @@
       <div class="logoInner">
         <div class="logos">
           <!-- ORDER: TIME, Vox, Fortune, Wistia, Eurasia, Vice, The Verge -->
-          <div class="logoItem time"><img src="https://i.imgur.com/6VI40y0.png" alt="TIME logo" loading="lazy"></div>
-          <div class="logoItem vox"><img src="https://i.imgur.com/1WWWpIE.png" alt="Vox Media logo" loading="lazy"></div>
-          <div class="logoItem fortune"><img src="https://i.imgur.com/0P9EjKk.png" alt="Fortune logo" loading="lazy"></div>
-          <div class="logoItem wistia"><img src="https://i.imgur.com/kodusrc.png" alt="Wistia logo" loading="lazy"></div>
-          <div class="logoItem eurasia"><img class="eurasia" src="https://i.imgur.com/bv7FAbT.png" alt="Eurasia Group logo" loading="lazy"></div>
-          <div class="logoItem vice"><img src="https://i.imgur.com/IAZrHeb.png" alt="VICE News logo" loading="lazy"></div>
-          <div class="logoItem verge"><img src="https://i.imgur.com/MwRtH2F.png" alt="The Verge logo" loading="lazy"></div>
+          <div class="logoItem time"><img src="/images/time-magazine-logo.svg" alt="TIME logo" width="120" height="40" loading="lazy"></div>
+          <div class="logoItem vox"><img src="/images/vox-media-logo.svg" alt="Vox Media logo" width="120" height="40" loading="lazy"></div>
+          <div class="logoItem fortune"><img src="/images/fortune-magazine-logo.svg" alt="Fortune logo" width="120" height="40" loading="lazy"></div>
+          <div class="logoItem wistia"><img src="/images/wistia-logo.svg" alt="Wistia logo" width="120" height="40" loading="lazy"></div>
+          <div class="logoItem eurasia"><img class="eurasia" src="/images/eurasia-group-logo.svg" alt="Eurasia Group logo" width="120" height="40" loading="lazy"></div>
+          <div class="logoItem vice"><img src="/images/vice-news-logo.svg" alt="VICE News logo" width="120" height="40" loading="lazy"></div>
+          <div class="logoItem verge"><img src="/images/the-verge-logo.svg" alt="The Verge logo" width="120" height="40" loading="lazy"></div>
         </div>
       </div>
     </section>
