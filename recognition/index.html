@@ -314,14 +314,6 @@
 
   .copyright{ justify-self:end; font-size:14px; color:var(--muted); }
 
-  /* Footer social icons (grayscale -> brand color) */
-  .socialText{ gap:16px; }
-  .socialIcon{ display:inline-flex; align-items:center; }
-  .socialIcon img{ height:18px; width:auto; display:block;
-    filter:grayscale(100%); -webkit-filter:grayscale(100%); opacity:.6;
-    transition: filter var(--reveal-ease), opacity var(--reveal-ease); }
-  .socialIcon:hover img, .socialIcon:focus-visible img{ filter:none; -webkit-filter:none; opacity:1; }
-  .vh{ position:absolute !important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
   .navCenter .footerLink{ color:var(--text); }
 
   @media (max-width: 980px){
@@ -333,9 +325,6 @@
     .copyright{ justify-self:start; }
   }
 
-  @media (hover: none){
-    .socialIcon img{ filter:none !important; -webkit-filter:none !important; opacity:1 !important; }
-  }
 
   @media (prefers-reduced-motion: reduce){
     *{ transition:none !important; animation:none !important; }
@@ -475,10 +464,12 @@
     </ul>
 
     <footer>
-      <div class="socialText">
-        <a class="socialIcon" href="https://www.linkedin.com/in/tylerborchers/" target="_blank" rel="noopener"><img src="/images/linkedin-icon.svg" alt="" width="18" height="18"><span class="vh">LinkedIn</span></a>
-        <a class="socialIcon" href="https://x.com/tylerborchers" target="_blank" rel="noopener"><img src="/images/x-icon.svg" alt="" width="18" height="18"><span class="vh">X</span></a>
-        <a class="socialIcon" href="https://bsky.app/profile/tylerborchers.com" target="_blank" rel="noopener"><img src="/images/bluesky-icon.svg" alt="" width="18" height="18"><span class="vh">Bluesky</span></a>
+            <div class="socialText">
+        <a class="footerLink" href="https://www.linkedin.com/in/tylerborchers/" target="_blank" rel="noopener">LinkedIn</a>
+        <span class="dot" aria-hidden="true">·</span>
+        <a class="footerLink" href="https://x.com/tylerborchers" target="_blank" rel="noopener">X</a>
+        <span class="dot" aria-hidden="true">·</span>
+        <a class="footerLink" href="https://bsky.app/profile/tylerborchers.com" target="_blank" rel="noopener">Bluesky</a>
       </div>
 
       <nav class="navCenter" aria-label="Site pages">

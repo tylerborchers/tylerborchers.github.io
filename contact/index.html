@@ -172,20 +172,12 @@
     border-color: rgba(17,17,17,.14);
   }
 
-  .channel img{
-    height:30px;
-    width:auto;
-    display:block;
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-    opacity:.6;
-    transition: filter var(--reveal-ease), opacity var(--reveal-ease);
-  }
-  .channel:hover img,
-  .channel:focus-visible img{
-    filter: grayscale(0);
-    -webkit-filter: grayscale(0);
-    opacity:1;
+  .channel{ color:#8a8d92; }
+  .channel svg{ height:30px; width:auto; display:block; fill:currentColor; transition: color var(--reveal-ease); }
+  @media (hover: hover){
+    .channel.s-li:hover{ color:#0A66C2; }
+    .channel.s-x:hover{ color:#111111; }
+    .channel.s-bs:hover{ color:#1185FE; }
   }
 
   footer{
@@ -227,14 +219,6 @@
 
   .copyright{ justify-self:end; font-size:14px; color:var(--muted); }
 
-  /* Footer social icons (grayscale -> brand color) */
-  .socialText{ gap:16px; }
-  .socialIcon{ display:inline-flex; align-items:center; }
-  .socialIcon img{ height:18px; width:auto; display:block;
-    filter:grayscale(100%); -webkit-filter:grayscale(100%); opacity:.6;
-    transition: filter var(--reveal-ease), opacity var(--reveal-ease); }
-  .socialIcon:hover img, .socialIcon:focus-visible img{ filter:none; -webkit-filter:none; opacity:1; }
-  .vh{ position:absolute !important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
   .navCenter .footerLink{ color:var(--text); }
 
   @media (max-width: 980px){
@@ -246,9 +230,6 @@
     .copyright{ justify-self:start; }
   }
 
-  @media (hover: none){
-    .socialIcon img, .channel img{ filter:none !important; -webkit-filter:none !important; opacity:1 !important; }
-  }
 
   @media (prefers-reduced-motion: reduce){
     *{ transition:none !important; animation:none !important; }
@@ -265,26 +246,28 @@
     <p class="lede">I take on select advisory work helping product, audience and revenue teams get more from AI. Tell me what you&rsquo;re building.</p>
 
     <div class="channels">
-      <a class="channel" href="https://www.linkedin.com/in/tylerborchers/" target="_blank" rel="noopener" aria-label="Message Tyler on LinkedIn">
-        <img src="/images/linkedin-icon.svg" alt="" width="30" height="30" />
+      <a class="channel s-li" href="https://www.linkedin.com/in/tylerborchers/" target="_blank" rel="noopener" aria-label="Message Tyler on LinkedIn">
+        <svg viewBox="96 96 448 448" aria-hidden="true"><path fill="currentColor" d="M512 96L127.9 96C110.3 96 96 110.5 96 128.3L96 511.7C96 529.5 110.3 544 127.9 544L512 544C529.6 544 544 529.5 544 511.7L544 128.3C544 110.5 529.6 96 512 96zM231.4 480L165 480L165 266.2L231.5 266.2L231.5 480L231.4 480zM198.2 160C219.5 160 236.7 177.2 236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160zM480.3 480L413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480z"/></svg>
       </a>
 
-      <a class="channel" href="https://x.com/tylerborchers" target="_blank" rel="noopener" aria-label="Message Tyler on X">
-        <img src="/images/x-icon.svg" alt="" width="30" height="30" />
+      <a class="channel s-x" href="https://x.com/tylerborchers" target="_blank" rel="noopener" aria-label="Message Tyler on X">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg>
       </a>
 
-      <a class="channel" href="https://bsky.app/profile/tylerborchers.com" target="_blank" rel="noopener" aria-label="Message Tyler on Bluesky">
-        <img src="/images/bluesky-icon.svg" alt="" width="30" height="30" />
+      <a class="channel s-bs" href="https://bsky.app/profile/tylerborchers.com" target="_blank" rel="noopener" aria-label="Message Tyler on Bluesky">
+        <svg viewBox="0 0 568 501" aria-hidden="true"><path d="M123.121 33.6637C188.241 82.5526 258.281 181.681 284 234.873C309.719 181.681 379.759 82.5526 444.879 33.6637C491.866 -1.61183 568 -28.9064 568 57.9464C568 75.2916 558.055 203.659 552.222 224.501C531.947 296.954 458.067 315.434 392.347 304.249C507.222 323.8 536.444 385.678 470.635 447.556C346.161 566.418 291.897 417.483 278 379.318C275.453 372.323 274.263 369.05 274.263 371.85C274.263 369.05 273.073 372.323 270.526 379.318C256.629 417.483 202.365 566.418 77.8915 447.556C12.0827 385.678 41.3047 323.8 156.18 304.249C90.4595 315.434 16.5799 296.954 -3.69539e-05 224.501C-5.83241 203.659 4.11265e-05 75.2916 4.11265e-05 57.9464C4.11265e-05 -28.9064 76.1339 -1.61183 123.121 33.6637Z"/></svg>
       </a>
     </div>
   </main>
 
   <div class="wrap wrap--footer">
     <footer>
-      <div class="socialText">
-        <a class="socialIcon" href="https://www.linkedin.com/in/tylerborchers/" target="_blank" rel="noopener"><img src="/images/linkedin-icon.svg" alt="" width="18" height="18"><span class="vh">LinkedIn</span></a>
-        <a class="socialIcon" href="https://x.com/tylerborchers" target="_blank" rel="noopener"><img src="/images/x-icon.svg" alt="" width="18" height="18"><span class="vh">X</span></a>
-        <a class="socialIcon" href="https://bsky.app/profile/tylerborchers.com" target="_blank" rel="noopener"><img src="/images/bluesky-icon.svg" alt="" width="18" height="18"><span class="vh">Bluesky</span></a>
+            <div class="socialText">
+        <a class="footerLink" href="https://www.linkedin.com/in/tylerborchers/" target="_blank" rel="noopener">LinkedIn</a>
+        <span class="dot" aria-hidden="true">·</span>
+        <a class="footerLink" href="https://x.com/tylerborchers" target="_blank" rel="noopener">X</a>
+        <span class="dot" aria-hidden="true">·</span>
+        <a class="footerLink" href="https://bsky.app/profile/tylerborchers.com" target="_blank" rel="noopener">Bluesky</a>
       </div>
 
       <nav class="navCenter" aria-label="Site pages">
