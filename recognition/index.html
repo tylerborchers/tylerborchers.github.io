@@ -162,7 +162,7 @@
   }
 
   .wrap{
-    max-width:1100px;
+    max-width:1200px;
     margin:0 auto;
     padding:72px 40px 56px;
   }
@@ -209,13 +209,6 @@
     box-shadow:0 10px 28px rgba(0,0,0,.06);
     break-inside:avoid;
     margin-bottom:18px;
-    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-    will-change: transform;
-  }
-  .card:hover{
-    transform: translateY(-1px);
-    box-shadow: var(--hoverShadow);
-    border-color: rgba(17,17,17,.14);
   }
 
   blockquote{
@@ -250,27 +243,21 @@
     background:var(--card);
     border:1px solid var(--rule);
     border-radius:14px;
-    padding:14px 18px;
-    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    transition: box-shadow .2s ease, border-color .2s ease;
   }
   .devItem:hover{
-    transform: translateY(-1px);
     box-shadow: var(--hoverShadow);
     border-color: rgba(17,17,17,.14);
   }
+  .devLink{ display:block; padding:14px 18px; text-decoration:none; border-radius:14px; }
 
   .devName{
-    display:inline-block;
+    display:block;
     font-size:15px;
     line-height:1.45;
     font-weight:600;
     color:var(--text);
-    text-decoration:none;
-    border-bottom:1px solid transparent;
-    padding-bottom:1px;
-    transition: color .15s ease, border-color .15s ease;
   }
-  .devName:hover{ color:var(--text); border-bottom-color: rgba(17,17,17,.45); }
 
   .devMeta{ margin-top:4px; font-size:14px; color:var(--muted); line-height:1.45; }
 
@@ -320,9 +307,11 @@
     .wrap{ padding:56px 28px 48px; }
     h1{ font-size:44px; }
     .masonry{ column-count:1; }
-    footer{ grid-template-columns: 1fr; justify-items:start; gap:10px; }
-    .navCenter{ justify-self:start; }
-    .copyright{ justify-self:start; }
+    footer{ grid-template-columns:1fr; justify-items:center; text-align:center; gap:18px; padding-top:26px; }
+    .navCenter{ order:1; justify-self:center; gap:14px; font-size:15px; }
+    .socialText{ order:2; justify-self:center; gap:14px; }
+    .copyright{ order:3; justify-self:center; width:100%; border-top:1px solid var(--rule);
+      padding-top:18px; font-size:13px; color:var(--muted); }
   }
 
 
@@ -438,28 +427,28 @@
     <h2 class="sectionTitle">Executive development</h2>
     <ul class="devList">
       <li class="devItem">
-        <a class="devName" href="https://www.journalismai.info/blog/meet-12-publishers-awarded-ai-innovation-grants" target="_blank" rel="noopener">
-          Project Director, JournalismAI Innovation Challenge
+        <a class="devLink" href="https://www.journalismai.info/blog/meet-12-publishers-awarded-ai-innovation-grants" target="_blank" rel="noopener">
+          <span class="devName">Project Director, JournalismAI Innovation Challenge</span>
+          <span class="devMeta">London School of Economics (2026)</span>
         </a>
-        <div class="devMeta">London School of Economics (2026)</div>
       </li>
       <li class="devItem">
-        <a class="devName" href="https://newsproduct.org/blog/introducing-the-fourth-cohort-of-the-news-product-management-certification" target="_blank" rel="noopener">
-          News Product Management Certification
+        <a class="devLink" href="https://newsproduct.org/blog/introducing-the-fourth-cohort-of-the-news-product-management-certification" target="_blank" rel="noopener">
+          <span class="devName">News Product Management Certification</span>
+          <span class="devMeta">News Product Alliance (2025)</span>
         </a>
-        <div class="devMeta">News Product Alliance (2025)</div>
       </li>
       <li class="devItem">
-        <a class="devName" href="https://thewholestory.solutionsjournalism.org/introducing-the-second-solutions-journalism-revenue-accelerator-cohort-e7285a28c1f5" target="_blank" rel="noopener">
-          Solutions Journalism Revenue Accelerator
+        <a class="devLink" href="https://thewholestory.solutionsjournalism.org/introducing-the-second-solutions-journalism-revenue-accelerator-cohort-e7285a28c1f5" target="_blank" rel="noopener">
+          <span class="devName">Solutions Journalism Revenue Accelerator</span>
+          <span class="devMeta">Blue Engine Collaborative (2025)</span>
         </a>
-        <div class="devMeta">Blue Engine Collaborative (2025)</div>
       </li>
       <li class="devItem">
-        <a class="devName" href="https://www.poynter.org/from-the-institute/2024/poynter-2024-essential-skills-for-rising-newsroom-leaders-cohort/" target="_blank" rel="noopener">
-          Essential Skills for Newsroom Leaders
+        <a class="devLink" href="https://www.poynter.org/from-the-institute/2024/poynter-2024-essential-skills-for-rising-newsroom-leaders-cohort/" target="_blank" rel="noopener">
+          <span class="devName">Essential Skills for Newsroom Leaders</span>
+          <span class="devMeta">Poynter Institute (2024)</span>
         </a>
-        <div class="devMeta">Poynter Institute (2024)</div>
       </li>
     </ul>
 
