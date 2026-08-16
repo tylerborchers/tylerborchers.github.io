@@ -240,6 +240,7 @@
   }
 
   .devItem{
+    position:relative;
     background:var(--card);
     border:1px solid var(--rule);
     border-radius:14px;
@@ -249,10 +250,19 @@
     box-shadow: var(--hoverShadow);
     border-color: rgba(17,17,17,.14);
   }
-  .devLink{ display:block; padding:14px 18px; text-decoration:none; border-radius:14px; }
+  .devLink{ display:block; padding:14px 18px; text-decoration:none; border-radius:14px;
+    transition: background-color .15s ease; }
+  .devLink:active{ background-color:#f4f4f5; }
+
+  /* external-link mark: the one place a card-link isn't self-evident (text-only card next to
+     the static testimonial cards). Persistent -> also reads as tappable on touch. */
+  .extArrow{ position:absolute; top:13px; right:14px; display:flex; color:var(--muted);
+    opacity:.5; transition: opacity .15s ease, color .15s ease; }
+  .devItem:hover .extArrow{ opacity:1; color:var(--text); }
 
   .devName{
     display:block;
+    padding-right:22px;
     font-size:15px;
     line-height:1.45;
     font-weight:600;
@@ -281,6 +291,7 @@
   }
 
   .footerLink{
+    position:relative;
     color:var(--muted);
     text-decoration:none;
     border-bottom:1px solid transparent;
@@ -307,9 +318,10 @@
     .wrap{ padding:56px 28px 48px; }
     h1{ font-size:44px; }
     .masonry{ column-count:1; }
-    footer{ grid-template-columns:1fr; justify-items:center; text-align:center; gap:18px; padding-top:26px; }
-    .navCenter{ order:1; justify-self:center; gap:14px; font-size:15px; }
-    .socialText{ order:2; justify-self:center; gap:14px; }
+    footer{ grid-template-columns:1fr; justify-items:center; text-align:center; gap:24px; padding-top:26px; border-top:none; }
+    .navCenter{ order:1; justify-self:center; gap:16px; font-size:15px; }
+    .socialText{ order:2; justify-self:center; gap:16px; }
+    .footerLink::after{ content:""; position:absolute; top:-11px; bottom:-11px; left:-8px; right:-8px; }
     .copyright{ order:3; justify-self:center; width:100%; border-top:1px solid var(--rule);
       padding-top:18px; font-size:13px; color:var(--muted); }
   }
@@ -429,25 +441,29 @@
       <li class="devItem">
         <a class="devLink" href="https://www.journalismai.info/blog/meet-12-publishers-awarded-ai-innovation-grants" target="_blank" rel="noopener">
           <span class="devName">Project Director, JournalismAI Innovation Challenge</span>
-          <span class="devMeta">London School of Economics (2026)</span>
+          <span class="devMeta">London School of Economics, on behalf of RNS (2026)</span>
+          <span class="extArrow" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M3.6 8.4 8.4 3.6M8.4 3.6H4.7M8.4 3.6V7.3" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
       </li>
       <li class="devItem">
         <a class="devLink" href="https://newsproduct.org/blog/introducing-the-fourth-cohort-of-the-news-product-management-certification" target="_blank" rel="noopener">
           <span class="devName">News Product Management Certification</span>
           <span class="devMeta">News Product Alliance (2025)</span>
+          <span class="extArrow" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M3.6 8.4 8.4 3.6M8.4 3.6H4.7M8.4 3.6V7.3" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
       </li>
       <li class="devItem">
         <a class="devLink" href="https://thewholestory.solutionsjournalism.org/introducing-the-second-solutions-journalism-revenue-accelerator-cohort-e7285a28c1f5" target="_blank" rel="noopener">
           <span class="devName">Solutions Journalism Revenue Accelerator</span>
-          <span class="devMeta">Blue Engine Collaborative (2025)</span>
+          <span class="devMeta">Blue Engine Collaborative, on behalf of RNS (2025)</span>
+          <span class="extArrow" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M3.6 8.4 8.4 3.6M8.4 3.6H4.7M8.4 3.6V7.3" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
       </li>
       <li class="devItem">
         <a class="devLink" href="https://www.poynter.org/from-the-institute/2024/poynter-2024-essential-skills-for-rising-newsroom-leaders-cohort/" target="_blank" rel="noopener">
           <span class="devName">Essential Skills for Newsroom Leaders</span>
           <span class="devMeta">Poynter Institute (2024)</span>
+          <span class="extArrow" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M3.6 8.4 8.4 3.6M8.4 3.6H4.7M8.4 3.6V7.3" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
       </li>
     </ul>
