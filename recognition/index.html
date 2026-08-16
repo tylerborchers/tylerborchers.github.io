@@ -197,9 +197,11 @@
   }
 
   .masonry{
-    column-count:2;
-    column-gap:18px;
+    display:flex;
+    gap:18px;
+    align-items:flex-start;
   }
+  .mcol{ flex:1; min-width:0; display:flex; flex-direction:column; gap:18px; }
 
   .card{
     background:var(--card);
@@ -207,8 +209,6 @@
     border-radius:16px;
     padding:20px 20px 18px;
     box-shadow:0 10px 28px rgba(0,0,0,.06);
-    break-inside:avoid;
-    margin-bottom:18px;
   }
 
   blockquote{
@@ -302,15 +302,15 @@
     h1{ font-size:44px; }
   }
   @media (max-width: 700px){
-    .masonry{ column-count:1; }
+    .masonry{ flex-direction:column; }
     .devList{ grid-template-columns:1fr; }
   }
   @media (max-width: 560px){
-    footer{ grid-template-columns:1fr; justify-items:center; text-align:center; gap:15px; padding-top:20px; border-top:none; }
-    .navCenter{ order:1; justify-self:center; gap:14px; font-size:15px; }
+    footer{ grid-template-columns:1fr; justify-items:center; text-align:center; gap:15px; padding-top:22px; border-top:1px solid var(--rule); }
+    .navCenter{ order:1; justify-self:center; gap:14px; }
     .socialText{ order:2; justify-self:center; gap:14px; }
     .footerLink::after{ content:""; position:absolute; top:-9px; bottom:-9px; left:-7px; right:-7px; }
-    .copyright{ order:3; justify-self:center; font-size:13px; color:var(--muted); }
+    .copyright{ display:none; }
   }
 
 
@@ -329,8 +329,8 @@
 
     <h2 class="sectionTitle">Endorsements</h2>
     <div class="masonry">
-
-      <div class="card">
+      <div class="mcol">
+        <div class="card">
         <blockquote>
           I worked with Tyler Borchers at Religion News Service, where he led audience and operations, and I really enjoyed collaborating with him. Tyler has a gift for talking about technology and audience strategy in a way that&rsquo;s accessible to anyone in the room, whether that&rsquo;s editorial, product, or leadership. He also brings a steady stream of ideas. He spotted a competitive Google News Initiative AI grant early, built internal alignment to pursue it, and helped land RNS a spot as one of 12 publishers selected from hundreds of applicants. He also led our website redesign, a big lift that required buy-in across the organization and resulted in a much stronger experience for our audience. Beyond the work, Tyler is genuinely kind and thoughtful, and a pleasure to be around. Any team would be lucky to have him.
         </blockquote>
@@ -339,8 +339,7 @@
           <div class="title">Chief Development Officer, RNS</div>
         </div>
       </div>
-
-      <div class="card">
+        <div class="card">
         <blockquote>
           Tyler joined the team as we were spinning up a new brand content division focused on longer form content. His strategic input, cross-functional project management skills, experience with audience development, and ability to balance multiple goals at once helped make that effort far more impactful for our business. Tyler is positive, a fast learner, organized, adaptable, and is great at synthesizing and incorporating stakeholder feedback. Tyler was truly a great teammate to all of us.
         </blockquote>
@@ -349,8 +348,7 @@
           <div class="title">Vice President of Marketing, Wistia</div>
         </div>
       </div>
-
-      <div class="card">
+        <div class="card">
         <blockquote>
           What makes Tyler so effective at driving audience is his unique understanding of the digital landscape. He was a reliable source of strategic insights that helped a key customer double its email audience. He made their business more resilient and challenged them to review campaigns that weren&rsquo;t working just as often as he celebrated their winning efforts. I would highly recommend Tyler to any business seeking a strategic thinker with strong audience development skills and superior command of digital and social media.
         </blockquote>
@@ -359,8 +357,7 @@
           <div class="title">Chief Operating Officer, AccuWeather</div>
         </div>
       </div>
-
-      <div class="card">
+        <div class="card">
         <blockquote>
           Tyler is a roll-up-his-sleeves, deeply technical marketer who knows every tool and tactic to develop an audience. He easily moves from strategy to execution with an enthusiasm for audience development that makes him an invaluable asset to any team. I loved working with him and would readily recommend his work.
         </blockquote>
@@ -369,8 +366,7 @@
           <div class="title">Director of Product Marketing, Wistia</div>
         </div>
       </div>
-
-      <div class="card">
+        <div class="card">
         <blockquote>
           Tyler is a hardworking, talented individual who would be a wise addition to any team or project. He brings valuable insights into not just the immediate work at hand, but the bigger picture behind the daily work as well.
         </blockquote>
@@ -379,8 +375,9 @@
           <div class="title">Deputy News Director, TIME and Fortune</div>
         </div>
       </div>
-
-      <div class="card">
+      </div>
+      <div class="mcol">
+        <div class="card">
         <blockquote>
           Tyler is energized by the intersection of audience strategy, analytics, product, and AI. While at RNS, he co-led RNS&rsquo;s successful $50,000 JournalismAI Innovation Challenge grant application and the project that followed. And he launched RNS Games, our first audience experiment outside traditional news formats. What stands out about Tyler is his &ldquo;let&rsquo;s try it&rdquo; instinct. He was ahead of most of the team on AI, leading adoption of multiple tools, running an internal AI position statement process, and coaching colleagues individually. He&rsquo;d be a strong addition to any newsroom serious about audience growth and responsible AI integration.
         </blockquote>
@@ -389,8 +386,7 @@
           <div class="title">Chief Executive Officer &amp; Publisher, RNS</div>
         </div>
       </div>
-
-      <div class="card">
+        <div class="card">
         <blockquote>
           I worked with Tyler on audience development, audience engagement, and digital strategy for over two years at a 90+-year-old nonprofit newsroom. Tyler is both a brilliant leader and a great team member, regularly leading meetings, strategy and brainstorming sessions, and long-term planning discussions. He delved deep into the challenges and opportunities within our organization using data, qualitative feedback, and research on the top trends of the day. What stands out to me more than anything is how excellent of a teacher he is. He was always more than happy to explain anything he was working on, lend insight into industry standards, and work on special projects that went above and beyond his stated duties.
         </blockquote>
@@ -399,8 +395,7 @@
           <div class="title">Director of Operations, RNS</div>
         </div>
       </div>
-
-      <div class="card">
+        <div class="card">
         <blockquote>
           Tyler is a consummate digital media professional. Having worked with him across two companies, one Big Media and one a digital upstart, I can say with confidence that Tyler is a major asset to a team of any size. He is a creative and strategic thinker, detail-oriented, and one of the best workers and team players I&rsquo;ve had the pleasure of calling a colleague. Tyler possesses a deep knowledge of social media, digital distribution, and the media industry in general. In a rapidly changing landscape, Tyler can help your organization adapt and thrive.
         </blockquote>
@@ -409,8 +404,7 @@
           <div class="title">Vice President of Content, Ladders</div>
         </div>
       </div>
-
-      <div class="card">
+        <div class="card">
         <blockquote>
           Tyler is extremely organized, thoughtful, and customer focused. He brings a wealth of knowledge of developing audiences and amplifying branded content through both paid and organic channels. Tyler is also a collaborative team member, always looking to help others, keep projects moving forward, and coming up with new ideas to bring life to a brand. Tyler&rsquo;s contributions to multiple large initiatives were instrumental to the success of each.
         </blockquote>
@@ -419,9 +413,8 @@
           <div class="title">Senior Director of Brand Marketing, Wistia</div>
         </div>
       </div>
-
+      </div>
     </div>
-
     <hr class="rule" />
 
     <h2 class="sectionTitle">Executive development</h2>
