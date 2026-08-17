@@ -161,6 +161,9 @@
     width:100vw; margin-left:calc(50% - 50vw);
   }
   .logoInner{ max-width:1200px; margin:0 auto; padding:28px 40px; }  /* logos align to the page content margins */
+  /* Text alternative for the logo band: shown to screen readers & crawlers when the desktop bar is hidden (marquee is decorative) */
+  .orgList-sr{ position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0 0 0 0); clip-path:inset(50%); white-space:nowrap; border:0; }
+  @media (min-width:1101px){ .orgList-sr{ display:none; } }
 
   .logos{
     display:flex; align-items:center; justify-content:space-between;
@@ -385,6 +388,7 @@
     </div>
 
     <section class="logoBand" aria-label="Selected organizations">
+      <p class="orgList-sr">Tyler has worked with TIME, Vox Media, Fortune, Wistia, Eurasia Group, VICE News and The Verge.</p>
       <div class="logoInner logoInner--desktop">
         <div class="logos"><div class="logoItem time"><img class="lg-color" src="/images/time-magazine-logo.svg" alt="TIME logo" loading="lazy"><span class="lg-ink" aria-hidden="true"><svg viewBox="0 0 360.08 110.01" aria-hidden="true"><use href="#ink-time"/></svg></span></div><div class="logoItem vox"><img class="lg-color" src="/images/vox-media-logo.svg" alt="Vox Media logo" loading="lazy"><span class="lg-ink" aria-hidden="true"><svg viewBox="0 0 500.08 67.74" aria-hidden="true"><use href="#ink-vox"/></svg></span></div><div class="logoItem fortune"><img class="lg-color" src="/images/fortune-magazine-logo.svg" alt="Fortune logo" loading="lazy"><span class="lg-ink" aria-hidden="true"><svg viewBox="0 0 381.65 96.68" aria-hidden="true"><use href="#ink-fortune"/></svg></span></div><div class="logoItem wistia"><img class="lg-color" src="/images/wistia-logo.svg" alt="Wistia logo" loading="lazy"><span class="lg-ink" aria-hidden="true"><svg viewBox="0 0 428.96 90.13" aria-hidden="true"><use href="#ink-wistia"/></svg></span></div><div class="logoItem eurasia"><img class="lg-color" src="/images/eurasia-group-logo.svg" alt="Eurasia Group logo" loading="lazy"><span class="lg-ink" aria-hidden="true"><svg viewBox="0 0 405.8 116.7" aria-hidden="true"><use href="#ink-eurasia"/></svg></span></div><div class="logoItem vice"><img class="lg-color" src="/images/vice-news-logo.svg" alt="VICE News logo" loading="lazy"><span class="lg-ink" aria-hidden="true"><svg viewBox="0 0 426.94 63.85" aria-hidden="true"><use href="#ink-vice"/></svg></span></div><div class="logoItem verge"><img class="lg-color" src="/images/the-verge-logo.svg" alt="The Verge logo" loading="lazy"><span class="lg-ink" aria-hidden="true"><svg viewBox="0 0 512 114.701" aria-hidden="true"><use href="#ink-verge"/></svg></span></div></div>
       </div>
