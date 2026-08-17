@@ -15,8 +15,11 @@
 <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-<!-- Preload LCP portrait -->
-<link rel="preload" as="image" href="/images/tyler-borchers-800.webp" type="image/webp" fetchpriority="high" />
+<!-- Preload LCP portrait (responsive: mirrors the <picture> so preload and render resolve to the SAME file) -->
+<link rel="preload" as="image" type="image/webp"
+  imagesrcset="/images/tyler-borchers-400.webp 400w, /images/tyler-borchers-800.webp 800w, /images/tyler-borchers-1200.webp 1200w"
+  imagesizes="(max-width: 980px) 320px, 360px"
+  fetchpriority="high" />
 
 <!-- Open Graph -->
 <meta property="og:title" content="Tyler Borchers | product, audience, revenue and AI leader" />
@@ -101,10 +104,9 @@
     --bg:#fafafa;
     --card:#ffffff;
     --text:#111;
-    --muted:#4e5155;            /* AAA (7.6:1) — one grey for secondary text, logo ink & separators */
+    --muted:#53565a;            /* AAA (7.07:1) — lowest step of the site cool-grey that still clears 7:1; secondary text, logo ink & separators */
     --rule:#e6e6e6;
-    /* Shared hover language */
-    --reveal-ease: .5s ease;
+    --bloom: .5s ease;          /* one colour-bloom timing: portrait + logo hover reveal */
   }
 
   *{ box-sizing:border-box; }
@@ -146,14 +148,14 @@
     margin-top:9px;                 /* top edge meets the cap-height of the name */
     aspect-ratio:1 / 1;             /* definite column width + aspect-ratio => guaranteed square in every browser */
     border-radius:16px; overflow:hidden; background:var(--card);
-    box-shadow:0 14px 40px rgba(0,0,0,.10);
+    box-shadow:0 16px 40px rgba(0,0,0,.10);   /* raised tier */
   }
   .portrait img{
     width:100%; height:100%; display:block;
     object-fit:cover; object-position:center 18%;
     filter: grayscale(100%) contrast(1.03);
     -webkit-filter: grayscale(100%) contrast(1.03);
-    transition: filter .55s ease;      /* slow, considered fade -- reads intentional, not trendy */
+    transition: filter var(--bloom);   /* slow, considered fade -- reads intentional, not trendy */
   }
   @media (hover: hover){
     .portrait:hover img{ filter: grayscale(0) contrast(1); -webkit-filter: grayscale(0) contrast(1); }
@@ -174,13 +176,14 @@
     display:flex; align-items:center; justify-content:space-between;
     gap:20px; flex-wrap:wrap; row-gap:22px;
   }
-  .logoItem{ position:relative; display:flex; align-items:center; justify-content:center; }
-  .logoItem .lg-ink{ display:flex; color:var(--muted); z-index:2; transform:translateY(var(--ny,0px));
-    transition:opacity var(--reveal-ease); }
+  /* Ink + colour share ONE grid cell with the SAME transform, so the ink->colour
+     crossfade is pure opacity with zero positional delta (removes the 1px hover shift). */
+  .logoItem{ display:grid; place-items:center; }
+  .logoItem .lg-ink, .logoItem .lg-color{ grid-area:1 / 1; transform:translateY(var(--ny,0px));
+    transition:opacity var(--bloom); }
+  .logoItem .lg-ink{ display:flex; color:var(--muted); z-index:2; }
   .logoItem .lg-ink svg{ display:block; width:auto; overflow:visible; }
-  .logoItem .lg-color{ position:absolute; left:50%; top:50%;
-    transform:translate(-50%, calc(-50% + var(--ny,0px)));
-    width:auto; z-index:1; opacity:0; transition:opacity var(--reveal-ease); }
+  .logoItem .lg-color{ width:auto; z-index:1; opacity:0; }
   /* optical (ink-centroid) vertical nudges so all marks sit on one visual centerline */
   .logoItem.wistia{ --ny:-2.6px; }
   .logoItem.eurasia{ --ny:-5.4px; }
@@ -258,7 +261,9 @@
     padding-bottom:1px; transition: color .15s ease, border-color .15s ease;
   }
   .footerLink:hover{ color:var(--text); border-bottom-color: rgba(17,17,17,.45); }
-  .dot{ color: rgba(78,81,85,.7); }
+  /* AAA target size (2.5.5): enlarge the hit area at EVERY breakpoint. Invisible; no layout change. */
+  .footerLink::after{ content:""; position:absolute; top:-13px; bottom:-13px; left:-12px; right:-12px; }
+  .dot{ color: rgba(83,86,90,.7); }
   .navCenter{ justify-self:center; font-size:14px; display:flex; align-items:center; gap:10px; }
   .copyright{ justify-self:end; font-size:14px; color:var(--muted); }
 
@@ -281,7 +286,6 @@
     footer{ grid-template-columns:1fr; justify-items:center; text-align:center; gap:28px; padding-top:20px; border-top:none; }
     .navCenter{ order:1; justify-self:center; gap:14px; }
     .socialText{ order:2; justify-self:center; gap:14px; }
-    .footerLink::after{ content:""; position:absolute; top:-13px; bottom:-13px; left:-12px; right:-12px; }
     .copyright{ display:none; }
   }
 
