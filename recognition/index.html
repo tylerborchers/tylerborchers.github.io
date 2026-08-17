@@ -83,28 +83,29 @@
         {
           "@type": "EducationalOccupationalCredential",
           "name": "Project Director, JournalismAI Innovation Challenge",
+          "url": "https://www.journalismai.info/programmes/innovation",
           "recognizedBy": {
             "@type": "Organization",
-            "name": "London School of Economics"
+            "name": "London School of Economics and Political Science"
           },
           "dateCreated": "2026"
         },
         {
           "@type": "EducationalOccupationalCredential",
           "name": "News Product Management Certification",
-          "recognizedBy": {
-            "@type": "Organization",
-            "name": "News Product Alliance"
-          },
+          "recognizedBy": [
+            { "@type": "Organization", "name": "News Product Alliance" },
+            { "@type": "CollegeOrUniversity", "name": "Craig Newmark Graduate School of Journalism at the City University of New York", "sameAs": "https://en.wikipedia.org/wiki/Craig_Newmark_Graduate_School_of_Journalism_at_the_City_University_of_New_York" }
+          ],
           "dateCreated": "2025"
         },
         {
           "@type": "EducationalOccupationalCredential",
           "name": "Solutions Journalism Revenue Accelerator",
-          "recognizedBy": {
-            "@type": "Organization",
-            "name": "Blue Engine Collaborative"
-          },
+          "recognizedBy": [
+            { "@type": "Organization", "name": "Blue Engine Collaborative" },
+            { "@type": "Organization", "name": "Solutions Journalism Network", "sameAs": "https://en.wikipedia.org/wiki/Solutions_Journalism_Network" }
+          ],
           "dateCreated": "2025"
         },
         {
@@ -283,7 +284,7 @@
   }
   .footerLink:hover{ color:var(--text); border-bottom-color: rgba(17,17,17,.45); }
 
-  .dot{ color: rgba(95,99,104,.7); }
+  .dot{ color: rgba(78,81,85,.7); }
 
   .navCenter{
     justify-self:center;
@@ -306,10 +307,10 @@
     .devList{ grid-template-columns:1fr; }
   }
   @media (max-width: 560px){
-    footer{ grid-template-columns:1fr; justify-items:center; text-align:center; gap:15px; padding-top:22px; border-top:1px solid var(--rule); }
+    footer{ grid-template-columns:1fr; justify-items:center; text-align:center; gap:28px; padding-top:22px; border-top:1px solid var(--rule); }
     .navCenter{ order:1; justify-self:center; gap:14px; }
     .socialText{ order:2; justify-self:center; gap:14px; }
-    .footerLink{ display:inline-flex; align-items:center; justify-content:center; min-width:44px; min-height:44px; padding:0 6px; }
+    .footerLink::after{ content:""; position:absolute; top:-13px; bottom:-13px; left:-12px; right:-12px; }
     .copyright{ display:none; }
   }
 

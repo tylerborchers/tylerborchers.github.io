@@ -171,7 +171,7 @@
     border-color: rgba(17,17,17,.16);
   }
 
-  .channel{ color:#6f7276; }
+  .channel{ color:var(--muted); }
   .channel svg{ height:30px; width:auto; display:block; fill:currentColor; transition: color var(--reveal-ease); }
   @media (hover: hover){
     .channel.s-li:hover{ color:#0A66C2; }
@@ -207,7 +207,7 @@
   }
   .footerLink:hover{ color:var(--text); border-bottom-color: rgba(17,17,17,.45); }
 
-  .dot{ color: rgba(95,99,104,.7); }
+  .dot{ color: rgba(78,81,85,.7); }
 
   .navCenter{
     justify-self:center;
@@ -227,10 +227,10 @@
     h1{ font-size:44px; }
   }
   @media (max-width: 560px){
-    footer{ grid-template-columns:1fr; justify-items:center; text-align:center; gap:15px; padding-top:22px; border-top:1px solid var(--rule); }
+    footer{ grid-template-columns:1fr; justify-items:center; text-align:center; gap:28px; padding-top:22px; border-top:1px solid var(--rule); }
     .navCenter{ order:1; justify-self:center; gap:14px; }
     .socialText{ order:2; justify-self:center; gap:14px; }
-    .footerLink{ display:inline-flex; align-items:center; justify-content:center; min-width:44px; min-height:44px; padding:0 6px; }
+    .footerLink::after{ content:""; position:absolute; top:-13px; bottom:-13px; left:-12px; right:-12px; }
     .copyright{ display:none; }
   }
 
