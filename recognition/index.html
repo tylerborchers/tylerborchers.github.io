@@ -145,6 +145,10 @@
     background:var(--bg);
     color:var(--text);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+    min-height:100dvh;
   }
 
   .skip-link{
@@ -169,7 +173,11 @@
   .wrap{
     max-width:1200px;
     margin:0 auto;
-    padding:72px 40px var(--v-bottom);
+    padding:72px 40px 0;
+  }
+  .wrap--footer{
+    padding:var(--v-section) 40px var(--v-bottom);
+    margin-top:auto;
   }
 
   .backLink{
@@ -261,7 +269,6 @@
   .devMeta{ margin-top:3px; font-size:14px; color:var(--muted); line-height:1.5; }
 
   footer{
-    margin-top:var(--v-section);
     padding-top:var(--v-footer-gap);
     border-top:1px solid var(--rule);
     display:grid;
@@ -306,7 +313,8 @@
   .navCenter .footerLink{ color:var(--text); }
 
   @media (max-width: 980px){
-    .wrap{ padding:56px 28px var(--v-bottom); }
+    .wrap{ padding:56px 28px 0; }
+    .wrap--footer{ padding:var(--v-section) 28px var(--v-bottom); }
     h1{ font-size:44px; }
   }
   @media (max-width: 700px){
@@ -447,7 +455,9 @@
         <span class="devMeta">Poynter Institute (2024)</span>
       </li>
     </ul>
+  </main>
 
+  <div class="wrap wrap--footer">
     <footer>
             <div class="socialText">
         <a class="footerLink" href="https://www.linkedin.com/in/tylerborchers/" target="_blank" rel="noopener">LinkedIn</a>
@@ -465,6 +475,6 @@
 
       <div class="copyright">&copy; 2026 Tyler Borchers</div>
     </footer>
-  </main>
+  </div>
 </body>
 </html>
