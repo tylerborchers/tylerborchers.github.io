@@ -120,6 +120,13 @@
   .wrap--footer{
     padding:var(--v-section) 40px var(--v-bottom);
   }
+  /* Mouse/desktop only: pin the footer to the bottom (this is where the short page looks weakest,
+     and desktop has no dynamic address bar, so no reflow). Touch devices (tablets/phones) stay
+     non-sticky, because iPad Safari's address-bar animation reflows any viewport-height sticky. */
+  @media (hover: hover) and (pointer: fine){
+    body{ display:flex; flex-direction:column; min-height:100vh; }
+    .wrap--footer{ margin-top:auto; }
+  }
 
   .backLink{
     display:inline-block;
